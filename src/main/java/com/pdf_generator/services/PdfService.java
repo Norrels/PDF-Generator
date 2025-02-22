@@ -27,6 +27,7 @@ public class PdfService {
         context.setVariable("employerName", "John Doe da Silva");
         context.setVariable("employerRole", "Vendedor Pleno");
         context.setVariable("employerDepartment", "Vendas");
+        context.setVariable("employerObservation", " O desempenho do funcionário tem sido consistente ao longo dos últimos seis meses, com um aumento notável na produtividade, especialmente no período de alta demanda.");
         context.setVariable("dataHora", LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
 
         List<Map<String, String>> vendasMensais = List.of(
