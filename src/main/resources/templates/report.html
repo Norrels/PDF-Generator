@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Relatório de Vendas</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="header">
+       <div>
+           <img src="assets/logo.svg" alt="Logo" />
+           <h1>Relatório de Vendas</h1>
+       </div>
+        <span>Jul 2024 - Dez 2024</span>
+    </div>
+
+    <p class="text separator">Vendas realizadas nos últimos 6 meses</p>
+
+    <div class="separator func-container">
+        <h2>Dados do Funcionário</h2>
+            <p>Nome: <span th:text="${employerName}"></span></p>
+            <p>Cargo: <span th:text="${employerRole}"></span></p>
+            <p>Departamento: <span th:text="${employerDepartment}"></span></p>
+    </div>
+
+    <div class="separator">
+        <h2>Vendas por Categoria</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Quantidade</th>
+                <th>Total Vendido</th>
+                <th>Comissão</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${itens}">
+                <td th:text="${item.category}"></td>
+                <td th:text="${item.qtd}"></td>
+                <td th:text="${item.total}"></td>
+                <td th:text="${item.comission}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="observation-container">Observações</h2>
+    <p class="text" th:text="${employerObservation}"></p>
+
+    <footer>
+        <p>Relatório gerado em <span th:text="${dataHora}"></span></p>
+    </footer>
+</div>
+</body>
+</html>

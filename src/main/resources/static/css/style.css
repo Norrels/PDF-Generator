@@ -1,0 +1,153 @@
+@page {
+  margin: 0; /* Remove margem da página */
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Geist", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: #dcdcdc 1px solid;
+}
+
+.header div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header div img {
+  margin-right: 10px;
+}
+
+.header span {
+  flex: 1;
+  width: 20%;
+  text-align: right;
+  font-size: 10px;
+  color: #7e7e7e;
+  font-weight: 700;
+}
+
+h1 {
+  color: #1e1e1e;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 13px;
+  color: #818181;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+}
+
+.separator {
+  padding: 20px 0;
+  border-bottom: #dcdcdc 1px solid;
+}
+
+.func-container {
+  width: 100%;
+}
+
+.func-container p {
+  font-size: 13px;
+  color: #818181;
+  font-weight: 400;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.func-container span {
+  font-size: 13px;
+  color: #1e1e1e;
+  font-weight: bold;
+
+  margin-left: auto;
+  text-align: right;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #480077;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+table td:last-child {
+  width: 10%;
+}
+
+table td:first-child {
+  width: 35%;
+}
+
+table td:nth-child(2) {
+  width: 10%;
+}
+
+.observation-container {
+  margin-top: 20px;
+}
+
+footer p {
+    text-align: right;
+    font-size: 10px;
+    color: #7e7e7e;
+    margin-top: 20px;
+}
