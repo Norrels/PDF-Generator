@@ -19,8 +19,12 @@ public class PdfController {
 
     @GetMapping("/download-pdf")
     public ResponseEntity<byte[]> downloadPdf() {
+
+            // Deve ser passado o mesmo nome do arquivo HTML que será processado
             byte[] pdfBytes = pdfService.generatePdf("report");
             HttpHeaders headers = new HttpHeaders();
+
+            // Define o nome do arquivo que será baixado
             headers.add("Content-Disposition", "attachment; filename=Relatorio.pdf");
 
             return new ResponseEntity<>(pdfBytes, headers, HttpStatus.OK);

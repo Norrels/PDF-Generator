@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -39,10 +39,12 @@ public class PdfService {
 
         context.setVariable("itens", vendasMensais);
 
+        // Processando o HTML passando os dados do contexto
         String html = templateEngine.process(templateName, context);
 
         try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
             ConverterProperties properties = new ConverterProperties();
+            // Setando o diretório base para buscar os recursos (imagens, css, etc)
             properties.setBaseUri("src/main/resources/static/");
             HtmlConverter.convertToPdf(html, outputStream, properties);
 
